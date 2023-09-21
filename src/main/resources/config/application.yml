@@ -175,7 +175,7 @@ jhipster:
   mail:
     from: chemicalsearch@localhost
   swagger:
-    default-include-pattern: /api/.*
+    default-include-pattern: /(chemicals|management)/.*
     title: chemicalsearch API
     description: chemicalsearch API documentation
     version: 0.0.1
@@ -195,3 +195,5 @@ jhipster:
 # ===================================================================
 
 # application:
+chemicalservice:
+  title: Chemical Service

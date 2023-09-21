@@ -43,9 +43,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/chemicalsearch?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password:
+    url: jdbc:mysql://localhost:3306/chemicalsearch?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: demoms
+    password: msDB!2023
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -58,6 +58,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: MYSQL
     show-sql: true
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate.id.new_generator_mappings: true
       hibernate.connection.provider_disables_autocommit: true
@@ -121,7 +123,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: NTAxODlhNmU5YzIxN2U4MGJhMDMxM2ZlMTE2MjQyOGFiYmZkODhjMjNkZDZiMWFmYjYyZDNkNjMyYmU0MTFmZDlhNDYxODQ2OGYwYzRlZDMwY2U2NzhjMzU4MTIyMzU4NzQ3ZGViOWViOWM5ZDE3OGRjNmJlODM4MGUwYjQzMzU=
+        base64-secret: ZDgyOGYxNTdhZWNmNmY1NWNjNjgxNzgyZTc4ZDUwYjUyNjdlOWQyZDE1ZGY0MTdiODJiNTZlYjUxNTQ3YTcyNWZlYjEwOTY5Y2E3MjllYzIzZDVjMWNkYTcwM2IzZGZjYTU5ZWQyYTRiMDQxODE4YjA4ODgyYzVlNTk3NWY2ZDA=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

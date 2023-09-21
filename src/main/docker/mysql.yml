@@ -1,12 +1,13 @@
 version: '2'
 services:
   chemicalsearch-mysql:
-    image: mysql:8.0.17
+    image: mysql:8.0.33-oracle
     # volumes:
     #     - ~/volumes/jhipster/chemicalsearch/mysql/:/var/lib/mysql/
     environment:
-      - MYSQL_USER=root
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_USER=demoms
+      - MYSQL_PASSWORD=msDB!2023
+      - MYSQL_ROOT_PASSWORD=ms!2023
       - MYSQL_DATABASE=chemicalsearch
     ports:
       - 3306:3306
